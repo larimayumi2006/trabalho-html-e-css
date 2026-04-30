@@ -1,0 +1,223 @@
+/*
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+header a {
+    width: 75px;
+    padding: 8px 16px 8px 16px;
+}
+
+.header-list {
+    align-items: center;
+    display: flex;
+    list-style-type:none;
+    gap: 20px;  
+}
+.right-header {
+    padding-right: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;;
+    width: 300px;
+    background-color: white;
+    padding: 5px 40px 5px 15px;;
+}
+
+label:focus-within {
+    border-color: #04AA6D;
+}
+
+.input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-style: italic;
+    font-size: 16px;
+    color: #222;
+    font-family: "Source Sans Pro Topnav", sans-serif;
+}
+
+.botao-pesquisa {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/2866/2866321.png);
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+#login {
+    background-color: #04AA6D;
+
+}
+    */
+
+:root {
+  --w3-green: #04AA6D;
+  --w3-dark: rgb(40, 42, 53);
+  --w3-white-green: #d9eee1;
+}
+
+body { 
+    margin: 0; 
+    font-family: "Source Sans Pro", sans-serif;
+    
+}
+
+header {
+   position: fixed;    /* Fixa o elemento na tela */
+   top: 0;             /* Gruda no topo absoluto */
+   left: 0;            /* Garante que comece na esquerda */
+   width: 100%;        /* Faz ocupar toda a largura */
+   z-index: 1000;
+}
+
+.header-cima {
+  background: #fff;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.conteudo-header-cima {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  
+}
+
+.conteudo-header-cima-esquerda, .conteudo-header-cima-direita {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 80px;
+  margin-right: 68px;
+}
+
+.logo-imagem{
+  height: 36px;
+ }
+
+.item-nav-esquerda, .item-nav-direita {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+/* ESTILO DO BUSCADOR INTEGRADO */
+.bara-pesquisa {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-left: 10px;
+}
+
+.bara-pesquisa input {
+  border: none;
+  outline: none;
+  width: 120px;
+  font-style: italic;
+}
+
+.botao-pesquisa {
+  background: url('https://cdn-icons-png.flaticon.com/512/2866/2866321.png') no-repeat center;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* BOTão DA DIREITA */
+
+.botao-sign-in {
+  height: 42px;
+  background-color: var(--w3-green);
+  color: white;
+  padding: 5px 26px;
+  border-radius: 7px;
+  border: none;
+  font-weight:bolder;
+  cursor: pointer;
+}
+
+/* SUB HEADER PRETO */
+.header-baixo {
+  background-color: var(--w3-dark);
+  overflow-x: auto; /* Permite rolar se a tela for pequena */
+  white-space: nowrap;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.header-baixo::-webkit-scrollbar {
+    display: none;
+}
+
+.item-nav-baixo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0px 15px;
+}
+
+.item-nav-baixo p {
+  color: white;
+  padding: 9px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.item-nav-baixo p:hover {
+  background-color: #000;
+}
+
+svg {
+  margin: 0;
+}
+
+.fundo-cinza {
+    width: 100%;
+    height:466px;
+    background-color: var(--w3-dark);
+    margin-top: 90px;
+}
+
+.conteudo-fundo-cinza {
+  display: flex;
+  flex-direction: column; /* elementos em coluna */
+  align-items: center; /* centraliza horizontalmente por causa da coluna */
+}
+
+.conteudo-fundo-cinza h1 {
+  font-size: 100px;
+}
+
+.fundo-verde {
+    width: 100%;
+    height:500px;
+    background-color: var(--w3-white-green);
+    margin-top: -10px;
+}
