@@ -222,33 +222,33 @@ svg {
 .conteudo-fundo-cinza h3{
   color: var(--w3-yellow);
   font-size: 21px;
+  margin-bottom: 40px;
 }
 
 .barra-pesquisa-grande {
   display: flex;
   width: 100%;
   max-width: 500px; /* Largura máxima da barra */
-  margin: auto;   /* Espaçamento em cima e embaixo */
-  height: 50px;
+  height: 45px;
   background-color: white;
   border-radius: 25px; /* Deixa as pontas redondas */
   overflow: hidden;
+  margin-bottom: 27px;
 }
 
 .barra-pesquisa-grande input {
     flex: 1;
     border: none;
     outline: none;
-    padding: 10px;
     padding-left: 25px;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .barra-pesquisa-grande button {
   background-color: var(--w3-green);
   color: white;
   border: none;
-  width: 70px;
+  width: 101px;
   cursor: pointer;
   font-size: 20px;
 }
@@ -260,7 +260,7 @@ svg {
 .conteudo-fundo-cinza a {
   text-decoration:underline;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 21px;
   margin-top: 10px;
 }
 
