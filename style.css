@@ -224,10 +224,44 @@ svg {
   font-size: 21px;
 }
 
+.barra-pesquisa-grande {
+  display: flex;
+  width: 100%;
+  max-width: 500px; /* Largura máxima da barra */
+  margin: auto;   /* Espaçamento em cima e embaixo */
+  height: 50px;
+  background-color: white;
+  border-radius: 25px; /* Deixa as pontas redondas */
+  overflow: hidden;
+}
+
+.barra-pesquisa-grande input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+.barra-pesquisa-grande button {
+  background-color: var(--w3-green);
+  color: white;
+  border: none;
+  width: 70px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.barra-pesquisa-grande button:hover {
+  background-color:#059862;
+}
+
 .conteudo-fundo-cinza a {
   text-decoration:underline;
   font-weight: bold;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .conteudo-fundo-cinza a:hover {
