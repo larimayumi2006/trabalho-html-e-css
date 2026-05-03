@@ -203,7 +203,7 @@ svg {
     width: 100%;
     height:466px;
     background-color: var(--w3-dark);
-    margin-top: 90px;
+    margin-top: 70px;
 }
 
 .conteudo-fundo-cinza {
@@ -270,7 +270,8 @@ svg {
 
 .fundo-verde {
     width: 100%;
-    height:500px;
+    height:575px;
     background-color: var(--w3-white-green);
     margin-top: -10px;
+    display: flex;
 }
