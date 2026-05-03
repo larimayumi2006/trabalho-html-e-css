@@ -1,72 +1,3 @@
-/*
-body {
-    font-family: "Source Sans Pro", sans-serif;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-}
-
-header a {
-    width: 75px;
-    padding: 8px 16px 8px 16px;
-}
-
-.header-list {
-    align-items: center;
-    display: flex;
-    list-style-type:none;
-    gap: 20px;  
-}
-.right-header {
-    padding-right: 10px;
-}
-
-nav {
-    display: flex;
-}
-
-label {
-    display: flex;
-    align-items: center;
-    border: 2px solid #ccc;
-    border-radius: 25px;;
-    width: 300px;
-    background-color: white;
-    padding: 5px 40px 5px 15px;;
-}
-
-label:focus-within {
-    border-color: #04AA6D;
-}
-
-.input {
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-style: italic;
-    font-size: 16px;
-    color: #222;
-    font-family: "Source Sans Pro Topnav", sans-serif;
-}
-
-.botao-pesquisa {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/2866/2866321.png);
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-}
-
-#login {
-    background-color: #04AA6D;
-
-}
-    */
-
 :root {
   --w3-green: #04AA6D;
   --w3-dark: rgb(40, 42, 53);
@@ -274,4 +205,51 @@ svg {
     background-color: var(--w3-white-green);
     margin-top: -10px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 575px; /* Use min-height para evitar cortes em telas menores */
+    gap: 20px;
+}
+
+.bloco_codigo {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #E7E9EB;
+  color: #000;
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  width: 430px;
+}
+
+.bloco_codigo .dentro_bloco_codigo {
+  border-left: 4px solid var(--w3-green);
+  background-color: #fff;
+  color: #000;
+  padding: 8px 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.tut-button, .ref-button, .tryit-button {
+    display: block;
+    width: 200px; /* Largura fixa para os botões da esquerda */
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: #FFF4A3;
+    color: black;
+}
+
+.tryit-button {
+    width: 150px; /* Botão verde dentro do código é um pouco menor */
+    background-color: var(--w3-green);
+    color: white;
 }
