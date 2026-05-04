@@ -33,15 +33,16 @@ header {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  
+  padding: 0 20px; /* Margem lateral flexível */
+  box-sizing: border-box;
 }
 
 .conteudo-header-cima-esquerda, .conteudo-header-cima-direita {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-left: 80px;
-  margin-right: 68px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .logo-imagem{
@@ -209,6 +210,7 @@ svg {
     height:auto;
     min-height: 575px; /* Use min-height para evitar cortes em telas menores */
     gap: 20px;
+
 }
 
 .conteudo-fundo-verde {
@@ -294,37 +296,58 @@ img, .bloco_codigo {
     height: auto;
 }
 
-@media (max-width: 992px) {
-    .conteudo-header-cima-esquerda {
-        margin-left: 10px;
-    }
-    
-    /* Esconde itens menos importantes em tablets/celulares */
-    .item-nav-esquerda, .item-nav-direita {
-        display: none; 
-    }
-    
-    /* Mantém apenas o essencial ou transforme em menu hambúrguer */
-    .logo-imagem {
-        display: block;
+.mobile-menu, .mobile-pesquisa {
+    display: none; 
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+.icon-dots { display: block; cursor: pointer; padding: 10px; }
+.mobile-menu, .mobile-search { display: none; }
+
+/* 2. ETAPA: Telas Médias (Escondendo itens da direita e esquerda aos poucos) */
+@media (max-width: 1100px) {
+    /* Tira Bootcamps, Spaces, Teachers */
+    .item-nav-direita:nth-child(1),
+    .item-nav-direita:nth-child(2),
+    .item-nav-direita:nth-child(3) {
+        display: none;
     }
 }
 
-@media (max-width: 600px) {
-    .conteudo-fundo-cinza h1 {
-        font-size: 35px; /* Reduz o título no celular */
-        margin-top: 50px;
+@media (max-width: 950px) {
+    /* Tira Upgrade e a barra de pesquisa interna */
+    .item-nav-direita:nth-child(4),
+    .bara-pesquisa {
+        display: none;
     }
+    /* Tira os itens de texto da esquerda */
+    .hide-tablet { display: none; }
+}
 
-    .conteudo-fundo-verde-esquerda h1 {
-        font-size: 50px;
-    }
-
-    .barra-pesquisa-grande {
-        width: 90%; /* Ocupa quase toda a largura da tela */
+/* 3. ETAPA: Mobile (Troca total de elementos) */
+@media (max-width: 750px) {
+    .icon-dots { display: none; } /* O ícone de 3 pontos some aqui */
+    
+    /* Aparece o Menu e a Lupa */
+    .mobile-menu { 
+        display: block; 
     }
     
-    .bloco_codigo {
-        width: 100%; /* O código ocupa a largura total disponível */
+    .mobile-search { 
+        display: block; 
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    /* Esconde o resto que sobrou da direita, exceto Sign In e Get Certified */
+    /* Se quiser esconder o Get Certified também, adicione aqui */
+}
+
+@media (max-width: 500px) {
+    /* No celular bem pequeno, some o "Get Certified" */
+    .item-nav-direita:nth-child(5) {
+        display: none;
     }
 }
