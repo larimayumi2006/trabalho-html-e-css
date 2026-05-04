@@ -201,23 +201,22 @@ svg {
 }
 
 .fundo-verde {
-    width: 100%;
-    height:575px;
     background-color: var(--w3-white-green);
     margin-top: -10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
+
+    width: 100%;
+    height:auto;
     min-height: 575px; /* Use min-height para evitar cortes em telas menores */
     gap: 20px;
 }
 
 .conteudo-fundo-verde {
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .conteudo-fundo-verde-esquerda {
@@ -288,4 +287,44 @@ svg {
   margin-top: 16px;
   margin-bottom: 16px;
   font-size: 15px;
+}
+
+img, .bloco_codigo {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .conteudo-header-cima-esquerda {
+        margin-left: 10px;
+    }
+    
+    /* Esconde itens menos importantes em tablets/celulares */
+    .item-nav-esquerda, .item-nav-direita {
+        display: none; 
+    }
+    
+    /* Mantém apenas o essencial ou transforme em menu hambúrguer */
+    .logo-imagem {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .conteudo-fundo-cinza h1 {
+        font-size: 35px; /* Reduz o título no celular */
+        margin-top: 50px;
+    }
+
+    .conteudo-fundo-verde-esquerda h1 {
+        font-size: 50px;
+    }
+
+    .barra-pesquisa-grande {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+    }
+    
+    .bloco_codigo {
+        width: 100%; /* O código ocupa a largura total disponível */
+    }
 }
