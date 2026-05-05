@@ -37,6 +37,10 @@ header {
   box-sizing: border-box;
 }
 
+.item-nav-direita , .item-nav-esquerda, .botao-sign-in {
+    flex-shrink: 0;    /* Impede que o texto esmague; se não couber, ele pula de linha */
+}
+
 .conteudo-header-cima-esquerda, .conteudo-header-cima-direita {
   display: flex;
   align-items: center;
@@ -223,6 +227,10 @@ svg {
 
 .conteudo-fundo-verde-esquerda {
   padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .conteudo-fundo-verde-esquerda h1 {
@@ -306,47 +314,119 @@ img, .bloco_codigo {
 .icon-dots { display: block; cursor: pointer; padding: 10px; }
 .mobile-menu, .mobile-search { display: none; }
 
-/* 2. ETAPA: Telas Médias (Escondendo itens da direita e esquerda aos poucos) */
-@media (max-width: 1100px) {
-    /* Tira Bootcamps, Spaces, Teachers */
-    .item-nav-direita:nth-child(1),
-    .item-nav-direita:nth-child(2),
+@media (max-width: 1350px) {
+    .item-nav-direita:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (max-width: 1260px) {
+    .item-nav-direita:nth-child(2){
+        display: none;
+    }
+}
+
+@media (max-width: 1170px) {
     .item-nav-direita:nth-child(3) {
         display: none;
     }
 }
 
-@media (max-width: 950px) {
-    /* Tira Upgrade e a barra de pesquisa interna */
-    .item-nav-direita:nth-child(4),
+@media (max-width: 1080px) {
+    .item-nav-direita:nth-child(4) {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .item-nav-esquerda:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 870px) {
     .bara-pesquisa {
         display: none;
     }
-    /* Tira os itens de texto da esquerda */
-    .hide-tablet { display: none; }
-}
 
-/* 3. ETAPA: Mobile (Troca total de elementos) */
-@media (max-width: 750px) {
-    .icon-dots { display: none; } /* O ícone de 3 pontos some aqui */
-    
-    /* Aparece o Menu e a Lupa */
-    .mobile-menu { 
-        display: block; 
-    }
-    
     .mobile-search { 
         display: block; 
         font-size: 18px;
         margin-left: 10px;
     }
-
-    /* Esconde o resto que sobrou da direita, exceto Sign In e Get Certified */
-    /* Se quiser esconder o Get Certified também, adicione aqui */
 }
 
-@media (max-width: 500px) {
-    /* No celular bem pequeno, some o "Get Certified" */
+@media (max-width: 825px) {
+    .item-nav-direita:nth-child(4) {
+        display: block;
+    }
+    
+}
+
+@media (max-width: 770px) {
+    .item-nav-esquerda:nth-child(4),
+    .item-nav-esquerda:nth-child(3),
+    .item-nav-esquerda:nth-child(2) {
+        display: none;
+    }
+    .mobile-menu { 
+        display: block; 
+    }
+
+    .bara-pesquisa {
+        display: block;
+    }
+
+    .mobile-search { 
+        display: none;
+    }
+    .conteudo-fundo-cinza h1 {
+      font-size: 55px;
+    }
+    .conteudo-fundo-verde-esquerda h1{
+      font-size: 50px;
+    }
+}
+
+/* 3. ETAPA: Mobile (Troca total de elementos) */
+@media (max-width: 700px) {
+    .icon-dots { display: none; } /* O ícone de 3 pontos some aqui */
+    
+}
+
+@media (max-width: 670px) {
+    .item-nav-direita:nth-child(4) {
+        display: block;
+    }
+    .bara-pesquisa {
+        display: none;
+    }
+
+    .mobile-search { 
+        display: block; 
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 580px) {
+    .item-nav-direita:nth-child(4) {
+        display: none;
+    }
+    .conteudo-fundo-verde-direita {
+      display: none;
+    }
+
+    .conteudo-fundo-cinza h1 {
+      font-size: 45px;
+    }
+
+    .conteudo-fundo-cinza h3 {
+      font-size: 19px;
+      text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
     .item-nav-direita:nth-child(5) {
         display: none;
     }
