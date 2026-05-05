@@ -1,4 +1,5 @@
-:root {
+/* cores */
+:root { 
   --w3-green: #04AA6D;
   --w3-dark: rgb(40, 42, 53);
   --w3-white-green: #d9eee1;
@@ -14,10 +15,9 @@ body {
 
 header {
    position: fixed;    /* Fixa o elemento na tela */
-   top: 0;             /* Gruda no topo absoluto */
-   left: 0;            /* Garante que comece na esquerda */
+   top: 0;            
+   left: 0;            
    width: 100%;        /* Faz ocupar toda a largura */
-   z-index: 1000;
 }
 
 .header-cima {
@@ -25,26 +25,23 @@ header {
   height: 56px;
   display: flex;
   align-items: center;
-  padding: 0 15px;
 }
 
 .conteudo-header-cima {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  align-items: center;
-  padding: 0 20px; /* Margem lateral flexível */
-  box-sizing: border-box;
+  padding: 0 45px; /* Margem lateral*/
 }
 
-.item-nav-direita , .item-nav-esquerda, .botao-sign-in {
+.item-nav-direita , .item-nav-esquerda, .botao-sign-in, .bara-pesquisa input {
     flex-shrink: 0;    /* Impede que o texto esmague; se não couber, ele pula de linha */
 }
 
 .conteudo-header-cima-esquerda, .conteudo-header-cima-direita {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 12px; /* espaçamento de linhas*/
   margin-left: 0;
   margin-right: 0;
 }
@@ -61,29 +58,30 @@ header {
   color: black;
 }
 
-/* ESTILO DO BUSCADOR INTEGRADO */
 .bara-pesquisa {
-  display: flex;
+  height: 27px;
   border: 1px solid #ccc;
   border-radius: 20px;
   padding: 4px 12px;
-  margin-left: 10px;
 }
 
 .bara-pesquisa input {
   border: none;
   outline: none;
-  width: 120px;
+  width: 100px;
   font-style: italic;
+  margin-top: 2px; /* para centralizar verticalmente*/
 }
 
 .botao-pesquisa {
-  background: url('https://cdn-icons-png.flaticon.com/512/2866/2866321.png') no-repeat center;
-  background-size: contain;
-  width: 15px;
-  height: 15px;
+  background-color: white;
+  color: black;
+  width: 18px;
+  height: 20px;
   border: none;
   cursor: pointer;
+  font-size: 17px;
+  margin-top: 2px; /* para centralizar verticalmente*/
 }
 
 /* BOTão DA DIREITA */
@@ -103,12 +101,11 @@ header {
 .header-baixo {
   background-color: var(--w3-dark);
   overflow-x: auto; /* Permite rolar se a tela for pequena */
-  white-space: nowrap;
 
-  scrollbar-width: none;
+  scrollbar-width: none; 
   -ms-overflow-style: none;
 }
-
+/* tira a barra de rolagem */
 .header-baixo::-webkit-scrollbar {
     display: none;
 }
@@ -120,7 +117,7 @@ header {
   padding: 0px 15px;
 }
 
-.item-nav-baixo p {
+.item-nav-baixo a {
   color: white;
   padding: 9px 15px;
   font-size: 14px;
@@ -128,7 +125,7 @@ header {
   margin: 0;
 }
 
-.item-nav-baixo p:hover {
+.item-nav-baixo a:hover {
   background-color: #000;
 }
 
@@ -168,13 +165,13 @@ svg {
   max-width: 500px; /* Largura máxima da barra */
   height: 45px;
   background-color: white;
-  border-radius: 25px; /* Deixa as pontas redondas */
+  border-radius: 25px; 
   overflow: hidden;
   margin-bottom: 27px;
 }
 
 .barra-pesquisa-grande input {
-    flex: 1;
+    flex: 1; /* faz o input esticar para ocupar todo espaço*/
     border: none;
     outline: none;
     padding-left: 25px;
@@ -212,7 +209,7 @@ svg {
 
     width: 100%;
     height:auto;
-    min-height: 575px; /* Use min-height para evitar cortes em telas menores */
+    min-height: 575px; /* para evitar cortes em telas menores */
     gap: 20px;
 
 }
@@ -306,13 +303,14 @@ img, .bloco_codigo {
 
 .mobile-menu, .mobile-pesquisa {
     display: none; 
-    padding: 10px;
-    font-weight: bold;
 }
 
 
-.icon-dots { display: block; cursor: pointer; padding: 10px; }
-.mobile-menu, .mobile-search { display: none; }
+.icone-3-pontos { 
+  display: block; 
+  cursor: pointer; 
+  padding: 10px; 
+}
 
 @media (max-width: 1350px) {
     .item-nav-direita:nth-child(1) {
@@ -348,10 +346,9 @@ img, .bloco_codigo {
         display: none;
     }
 
-    .mobile-search { 
-        display: block; 
-        font-size: 18px;
-        margin-left: 10px;
+    .mobile-pesquisa { 
+        display: block;
+        font-size: 18px; 
     }
 }
 
@@ -362,7 +359,7 @@ img, .bloco_codigo {
     
 }
 
-@media (max-width: 770px) {
+@media (max-width: 775px) {
     .item-nav-esquerda:nth-child(4),
     .item-nav-esquerda:nth-child(3),
     .item-nav-esquerda:nth-child(2) {
@@ -376,7 +373,7 @@ img, .bloco_codigo {
         display: block;
     }
 
-    .mobile-search { 
+    .mobile-pesquisa { 
         display: none;
     }
     .conteudo-fundo-cinza h1 {
@@ -387,13 +384,12 @@ img, .bloco_codigo {
     }
 }
 
-/* 3. ETAPA: Mobile (Troca total de elementos) */
 @media (max-width: 700px) {
-    .icon-dots { display: none; } /* O ícone de 3 pontos some aqui */
+    .icone-3-pontos { display: none; } 
     
 }
 
-@media (max-width: 670px) {
+@media (max-width: 660px) {
     .item-nav-direita:nth-child(4) {
         display: block;
     }
@@ -401,10 +397,9 @@ img, .bloco_codigo {
         display: none;
     }
 
-    .mobile-search { 
+    .mobile-pesquisa { 
         display: block; 
         font-size: 18px;
-        margin-left: 10px;
     }
 }
 
