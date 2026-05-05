@@ -408,10 +408,7 @@ img, .bloco_codigo {
     }
 }
 
-@media (max-width: 580px) {
-    .item-nav-direita:nth-child(4) {
-        display: none;
-    }
+@media (max-width: 600px) {
     .conteudo-fundo-verde-direita {
       display: none;
     }
@@ -425,6 +422,11 @@ img, .bloco_codigo {
       text-align: center;
     }
 }
+@media (max-width: 530px) {
+    .item-nav-direita:nth-child(4) {
+      display: none;
+    }
+  }
 
 @media (max-width: 450px) {
     .item-nav-direita:nth-child(5) {
