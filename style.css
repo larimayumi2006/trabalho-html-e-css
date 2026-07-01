@@ -436,3 +436,46 @@ img, .bloco_codigo {
         display: none;
     }
 }
+
+/* 
+parte do JAVASCRIPT
+*/
+
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.artigo-w3 h2 {
+    color: #28a745; /* Verde clássico de tutoriais */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.logo-linguagem {
+    max-width: 120px;
+    height: auto;
+    float: right; /* Faz o texto contornar a imagem lateralmente */
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.descricao {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.link-leia-mais {
+    display: inline-block;
+    margin-top: 15px;
+    color: #04AA6D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-leia-mais:hover {
+    text-decoration: underline;
+}
