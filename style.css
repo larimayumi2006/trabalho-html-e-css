@@ -447,35 +447,81 @@ parte do JAVASCRIPT
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.artigo-w3 h2 {
-    color: #28a745; /* Verde clássico de tutoriais */
-    font-size: 28px;
-    margin-bottom: 15px;
+/* Container Geral */
+.divInformacoes {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin-top: 25px;
 }
 
-.logo-linguagem {
-    max-width: 120px;
-    height: auto;
-    float: right; /* Faz o texto contornar a imagem lateralmente */
-    margin-left: 20px;
+/* Títulos */
+.titulo-linguagem {
+    font-size: 36px;
+    margin: 0 0 5px 0;
+    color: #212529;
+}
+
+.subtitulo-linguagem {
+    font-size: 18px;
+    color: #555;
+    margin: 0 0 15px 0;
+    font-style: italic;
+}
+
+.linha-divisoria {
+    border: 0;
+    border-top: 1px solid #ccc;
     margin-bottom: 20px;
-    border-radius: 4px;
 }
 
-.descricao {
+/* Organização do Conteúdo */
+.conteudo-principal {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.texto-explicativo p {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
+    margin: 0;
 }
 
-.link-leia-mais {
-    display: inline-block;
-    margin-top: 15px;
-    color: #04AA6D;
+.logo-linguagem {
+    max-width: 140px;
+    height: auto;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Rodapé e Botão */
+.rodape-artigo {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.botaolink {
+    background-color: #04AA6D; /* Verde clássico do W3Schools */
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.2s;
 }
 
-.link-leia-mais:hover {
-    text-decoration: underline;
+.botaolink:hover {
+    background-color: #059862;
 }
